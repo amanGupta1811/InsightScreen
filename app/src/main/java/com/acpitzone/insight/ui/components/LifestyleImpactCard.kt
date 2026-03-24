@@ -32,7 +32,7 @@ data class CorrelationRow(
 fun LifestyleImpactCard() {
     var selectedPeriod by remember { mutableStateOf("4 months") }
     var dropdownExpanded by remember { mutableStateOf(false) }
-    val periodOptions = listOf("1 month", "2 months", "3 months", "4 months", "6 months")
+    val periodOptions = listOf("1 month", "2 months", "3 months", "4 months", "5 months", "6 months")
 
     // Update filled counts based on selected period
     val periodMultiplier = when (selectedPeriod) {
@@ -40,7 +40,8 @@ fun LifestyleImpactCard() {
         "2 months" -> 0.5f
         "3 months" -> 0.75f
         "4 months" -> 1.0f
-        "6 months" -> 1.2f
+        "5 months" -> 1.2f
+        "6 months" -> 1.5f
         else -> 1.0f
     }
 
